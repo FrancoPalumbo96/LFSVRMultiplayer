@@ -48,6 +48,8 @@ public class PhotonPlayer : MonoBehaviour
                 case 1:
                     myAvatar = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Ghost"/*"PlayerAvatarOVR"*/), 
                         spawnPoints[spawnPicker], Quaternion.identity, 0);
+                    myAvatar.GetComponent<Camera>().enabled = true;
+                    myAvatar.GetComponent<AudioListener>().enabled = true;
                     Debug.Log("Ghost was chosen, playerType = " + playerType);
                     break;
                 default:
@@ -61,6 +63,7 @@ public class PhotonPlayer : MonoBehaviour
         }
         else {
             if (playerType == 1) {
+                Debug.LogError("Corre esto o no");
                 myAvatar.GetComponent<Camera>().enabled = false;
                 myAvatar.GetComponent<AudioListener>().enabled = false;
             }
