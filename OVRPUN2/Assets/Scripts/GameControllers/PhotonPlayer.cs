@@ -61,13 +61,6 @@ public class PhotonPlayer : MonoBehaviour
             /*myAvatar = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Robot"/*"PlayerAvatarOVR"#1#), 
                 spawnPoints[spawnPicker], Quaternion.identity, 0);*/
         }
-        else {
-            if (playerType == 1) {
-                Debug.LogError("Corre esto o no");
-                myAvatar.GetComponent<Camera>().enabled = false;
-                myAvatar.GetComponent<AudioListener>().enabled = false;
-            }
-        }
         Debug.Log("Numb of Players: "+PhotonRoom.players);
     }
 }
