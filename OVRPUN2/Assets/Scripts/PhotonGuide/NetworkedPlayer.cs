@@ -9,15 +9,11 @@ public class NetworkedPlayer : MonoBehaviourPun
     public Transform playerGlobal;
     public Transform playerLocal;
 
-    private int playerType;
-
     void Start ()
     {
         Debug.Log("Player instantiated");
-        Debug.LogError("Este script nose si se tendria que usar, si se usa hacer el todo");
 
         if (photonView.IsMine) {
-            //TODO
             Debug.LogWarning("Change this a litte for other non robot players");
 
             playerGlobal = GameObject.Find("[CameraRig]").transform;
