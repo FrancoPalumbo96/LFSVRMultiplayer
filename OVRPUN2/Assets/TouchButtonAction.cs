@@ -23,8 +23,10 @@ public class TouchButtonAction : MonoBehaviourPun {
     }
 
     private void OnTriggerEnter(Collider other) {
+        Debug.LogError(other.gameObject.name);
         
-        if(!other.gameObject.name.Contains("coll_hands:b_l_index2")) return;
+        if(!(other.gameObject.name.Contains("coll_hands:b_l_index2") || 
+             other.gameObject.name.Contains("coll_hands:b_r_index2") )) return;
         
         if(photonView != null) photonView.RequestOwnership();
         
