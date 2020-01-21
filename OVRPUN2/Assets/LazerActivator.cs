@@ -18,11 +18,14 @@ public class LazerActivator : MonoBehaviourPun {
     void Start()
     {
 //        photonView = transform.parent.parent.GetComponent<PhotonView>();
+        if (transform.parent == null) {
+            Destroy(gameObject);
+        }
         photonView = GetComponent<PhotonView>();
 
         if(!photonView.IsMine) return;
 
-        photonView.RPC("deactivateLazer", RpcTarget.AllBuffered); 
+        photonView.RPC("DeactivateLazer", RpcTarget.AllBuffered); 
 
     }
 
@@ -44,7 +47,7 @@ public class LazerActivator : MonoBehaviourPun {
             isLazerActive = false;
             Debug.LogWarning("Lazer Deactivated");
 
-            photonView.RPC("deactivateLazer", RpcTarget.OthersBuffered); 
+            photonView.RPC("DeactivateLazer", RpcTarget.OthersBuffered); 
 //                DeactivateLazer();
         }
         else {
@@ -61,7 +64,7 @@ public class LazerActivator : MonoBehaviourPun {
     }
 
     [PunRPC]
-    private void deactivateLazer() {
+    private void DeactivateLazer() {
         visualLazer.SetActive(false);
         lazerEventSystem.SetActive(false);
         isLazerActive = false;

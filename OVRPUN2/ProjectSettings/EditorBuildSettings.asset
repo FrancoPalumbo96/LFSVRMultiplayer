@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MultiplayerScene.unity
     guid: 4fc70d57aa3c12a4ab8bb1293e4387e3
   - enabled: 0
+    path: Assets/Scenes/MainMenuSceneQuest 1.unity
+    guid: 7462493031d24384c85a7db4a89af1b6
+  - enabled: 0
     path: Assets/Scenes/MainMenuTestFps.unity
     guid: 29d4cd47a1c478147ab4f27d94447c1d
   - enabled: 0
@@ -43,7 +46,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/OVRInputSelection/Scenes/selection_ui.unity
     guid: 7adfd19eba27b40748b2a0f7ae856c08
-  - enabled: 0
-    path: Assets/Scenes/MainMenuSceneQuest 1.unity
-    guid: 7462493031d24384c85a7db4a89af1b6
   m_configObjects: {}
