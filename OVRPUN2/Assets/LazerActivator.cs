@@ -34,8 +34,11 @@ public class LazerActivator : MonoBehaviourPun {
  
     private void LazerManager() {
         if(!photonView.IsMine) return;
+
         if (!OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.RTouch)) return;
+
         if (isLazerActive) {
+
             visualLazer.SetActive(false);
             lazerEventSystem.SetActive(false);
             isLazerActive = false;
