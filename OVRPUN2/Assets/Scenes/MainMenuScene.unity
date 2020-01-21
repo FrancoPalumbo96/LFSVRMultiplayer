@@ -902,6 +902,7 @@ MonoBehaviour:
   multiplayerScene: 1
   currentScene: 0
   spawnPoints: []
+  selectPlayer: 0
 --- !u!4 &1161336831
 Transform:
   m_ObjectHideFlags: 0
@@ -935,7 +936,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 0}
-  viewIdField: 274
+  viewIdField: 13
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!1 &1340118613

@@ -38,10 +38,8 @@ MonoBehaviour:
   - setVideoTime
   - SendRPC
   - setVideo
-  - updateLineRenderer
-  - ActivateLazer
-  - DeactivateLazer
   - activateLazer
   - deactivateLazer
+  - updateLineRenderer
   DisableAutoOpenWizard: 1
   ShowSettings: 1
