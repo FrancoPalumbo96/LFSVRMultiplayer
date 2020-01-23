@@ -10,6 +10,8 @@ public class RobotOVR : MonoBehaviour {
     public GameObject ovrPrefab;
     private PhotonView PV;
 
+    private static int nextId = 400;
+
 
     private VRRig _rig;
 
@@ -35,9 +37,21 @@ public class RobotOVR : MonoBehaviour {
         PV = GetComponent<PhotonView>();
         if (PV.IsMine) {
 
+
+            LazerActivator la = gameObject.AddComponent<LazerActivator>();
+            la.visualLazer = gameObject.transform.Find("Lazer").transform.GetChild(0).gameObject;
+            la.lazerEventSystem = gameObject.transform.Find("Lazer").transform.GetChild(1).gameObject;
+            
+            
             //TODO controversial line of code
             GameObject ovr = Instantiate(ovrPrefab, transform.position, ovrPrefab.transform.rotation);
-            ovr.GetComponent<PhotonView>().ViewID = 200;
+            //TODO check if 200 is taken
+            ovr.GetComponent<PhotonView>().ViewID = nextId;
+            int aux = nextId + 1;
+            PV.RPC("ChangeNextId", RpcTarget.AllBuffered, aux); 
+
+            
+            
             _rig = GetComponent<VRRig>();
             /*GameObject ovr = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerAvatarOVR"), 
                 transform.position, ovrPrefab.transform.rotation, 0);*/
@@ -53,5 +67,11 @@ public class RobotOVR : MonoBehaviour {
         }
        
     }
+
+    [PunRPC]
+    private void ChangeNextId(int newId) {
+        RobotOVR.nextId = newId;
+    }
+    
 
 }

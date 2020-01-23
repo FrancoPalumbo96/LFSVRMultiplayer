@@ -18,12 +18,13 @@ public class LazerActivator : MonoBehaviourPun {
     void Start()
     {
 //        photonView = transform.parent.parent.GetComponent<PhotonView>();
-        if (transform.parent == null) {
+        /*if (transform.parent == null) {
             this.enabled = false;
-        }
+        }*/
 
-        photonView = gameObject.AddComponent<PhotonView>();
-        photonView.ViewID = 201;
+//        photonView = gameObject.AddComponent<PhotonView>();
+        photonView = GetComponent<PhotonView>();
+       // photonView.ViewID = 201;
         
 //        Debug.LogError(photonView);
         if(!photonView.IsMine) return;
