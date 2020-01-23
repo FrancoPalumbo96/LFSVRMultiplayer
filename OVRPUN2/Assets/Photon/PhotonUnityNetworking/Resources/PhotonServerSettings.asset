@@ -42,5 +42,6 @@ MonoBehaviour:
   - deactivateLazer
   - updateLineRenderer
   - DeactivateLazer
+  - ChangeNextId
   DisableAutoOpenWizard: 1
   ShowSettings: 1

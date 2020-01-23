@@ -35,14 +35,13 @@ public class LazerActivator : MonoBehaviourPun {
 
     private void Update() {
 //        Debug.LogError(photonView);
-        LazerManager();
+        if(photonView.IsMine)
+            LazerManager();
         //photonView.RPC("SendRPC", RpcTarget.MasterClient);   
     }
 
  
     private void LazerManager() {
-        if(!photonView.IsMine) return;
-
         if (!OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.RTouch)) return;
 
         if (isLazerActive) {
