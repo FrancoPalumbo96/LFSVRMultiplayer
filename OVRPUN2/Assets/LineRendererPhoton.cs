@@ -9,7 +9,7 @@ public class LineRendererPhoton : MonoBehaviourPun {
     private PhotonView photonView;
     // Start is called before the first frame update
     void Start() {
-        photonView = transform.parent.parent.GetComponent<PhotonView>();
+        photonView = GetComponent<PhotonView>();
         lineRenderer = GetComponent<LineRenderer>();
     }
 
