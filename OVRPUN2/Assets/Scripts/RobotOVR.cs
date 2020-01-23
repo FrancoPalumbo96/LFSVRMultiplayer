@@ -36,10 +36,11 @@ public class RobotOVR : MonoBehaviour {
         if (PV.IsMine) {
 
             //TODO controversial line of code
-            /*GameObject ovr = Instantiate(ovrPrefab, transform.position, ovrPrefab.transform.rotation);
-            _rig = GetComponent<VRRig>();*/
-            GameObject ovr = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerAvatarOVR"), 
-                transform.position, ovrPrefab.transform.rotation, 0);
+            GameObject ovr = Instantiate(ovrPrefab, transform.position, ovrPrefab.transform.rotation);
+            ovr.GetComponent<PhotonView>().ViewID = 200;
+            _rig = GetComponent<VRRig>();
+            /*GameObject ovr = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerAvatarOVR"), 
+                transform.position, ovrPrefab.transform.rotation, 0);*/
 
             string ovrName = ovr.name;
 

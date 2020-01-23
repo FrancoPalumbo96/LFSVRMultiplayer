@@ -19,10 +19,13 @@ public class LazerActivator : MonoBehaviourPun {
     {
 //        photonView = transform.parent.parent.GetComponent<PhotonView>();
         if (transform.parent == null) {
-            Destroy(gameObject);
+            this.enabled = false;
         }
-        photonView = GetComponent<PhotonView>();
 
+        photonView = gameObject.AddComponent<PhotonView>();
+        photonView.ViewID = 201;
+        
+//        Debug.LogError(photonView);
         if(!photonView.IsMine) return;
 
         photonView.RPC("DeactivateLazer", RpcTarget.AllBuffered); 
@@ -30,6 +33,7 @@ public class LazerActivator : MonoBehaviourPun {
     }
 
     private void Update() {
+//        Debug.LogError(photonView);
         LazerManager();
         //photonView.RPC("SendRPC", RpcTarget.MasterClient);   
     }
