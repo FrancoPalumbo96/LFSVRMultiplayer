@@ -21,7 +21,7 @@ public class LineRendererPhoton : MonoBehaviourPun {
     
     
     private void Update() {
-        if(photonView.IsMine)
+        if(photonView.IsMine && this.enabled)
             photonView.RPC("updateLineRenderer", RpcTarget.Others, lineRenderer.GetPosition(0), lineRenderer.GetPosition(1));   
     }
 

@@ -40,7 +40,7 @@ namespace ControllerSelection {
         [HideInInspector]
         public OVRInput.Controller activeController = OVRInput.Controller.None;
 
-        void Awake() {
+        /*void Awake() {
             if (trackingSpace == null) {
                 Debug.LogWarning("OVRPointerVisualizer did not have a tracking space set. Looking for one");
                 trackingSpace = OVRInputHelpers.FindTrackingSpace();
@@ -60,7 +60,7 @@ namespace ControllerSelection {
                 Debug.LogWarning("OVRPointerVisualizer did not have a tracking space set. Looking for one");
                 trackingSpace = OVRInputHelpers.FindTrackingSpace();
             }
-        }
+        }*/
 
         public void SetPointer(Ray ray) {
             if (linePointer != null) {
