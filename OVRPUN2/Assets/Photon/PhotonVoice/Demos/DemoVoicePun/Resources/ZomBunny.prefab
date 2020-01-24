@@ -103,8 +103,8 @@ GameObject:
   - component: {fileID: 11440456}
   - component: {fileID: 11412288}
   - component: {fileID: 114280835654544784}
-  - component: {fileID: -8532865752295750310}
-  - component: {fileID: -4088922417442017954}
+  - component: {fileID: 7965350858237310806}
+  - component: {fileID: 4336626281672721875}
   m_Layer: 0
   m_Name: ZomBunny
   m_TagString: Player
@@ -321,11 +321,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logLevel: 1
   recorderInUse: {fileID: 0}
-  speakerInUse: {fileID: -4088922417442017954}
+  speakerInUse: {fileID: 0}
   AutoCreateRecorderIfNotFound: 0
   UsePrimaryRecorder: 1
   SetupDebugSpeaker: 1
---- !u!82 &-8532865752295750310
+--- !u!82 &7965350858237310806
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -421,7 +421,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-4088922417442017954
+--- !u!114 &4336626281672721875
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

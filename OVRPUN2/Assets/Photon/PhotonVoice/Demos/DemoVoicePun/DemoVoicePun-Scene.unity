@@ -6062,7 +6062,10 @@ MonoBehaviour:
   PositionOffset: 10
   PrefabsToInstantiate:
   - {fileID: 100002, guid: e5171f72421770240bd7c3989fe351e3, type: 3}
-  manualInstantiation: 0
+  - {fileID: 100000, guid: ea3c2728ef33e3a4d99527a86cda6465, type: 3}
+  - {fileID: 153412, guid: 548c56f4bcf4db24b8aa057e9846a005, type: 3}
+  - {fileID: 100006, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+  manualInstantiation: 1
 --- !u!114 &1979019748
 MonoBehaviour:
   m_ObjectHideFlags: 0
