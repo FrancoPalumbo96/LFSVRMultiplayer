@@ -949,7 +949,7 @@ PrefabInstance:
     - target: {fileID: 8418981835529329832, guid: d156c52404eb24bcf80bc4dadaaadc80,
         type: 3}
       propertyPath: microphoneType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8418981835529329832, guid: d156c52404eb24bcf80bc4dadaaadc80,
         type: 3}

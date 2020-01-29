@@ -206,7 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logLevel: 1
   recorderInUse: {fileID: 0}
-  speakerInUse: {fileID: 0}
+  speakerInUse: {fileID: -3837658747321294638}
   AutoCreateRecorderIfNotFound: 0
   UsePrimaryRecorder: 0
   SetupDebugSpeaker: 0
