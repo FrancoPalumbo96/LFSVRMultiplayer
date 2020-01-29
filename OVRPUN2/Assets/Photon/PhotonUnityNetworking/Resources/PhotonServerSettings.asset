@@ -15,7 +15,7 @@ MonoBehaviour:
   AppSettings:
     AppIdRealtime: 5b457b1c-824d-4aa0-b222-99cd9b12666a
     AppIdChat: 
-    AppIdVoice: 
+    AppIdVoice: 9aa8a574-22d2-4b0a-a362-d2ad7af29dda
     AppVersion: 
     UseNameServer: 1
     FixedRegion: eu
@@ -41,5 +41,6 @@ MonoBehaviour:
   - activateLazer
   - deactivateLazer
   - updateLineRenderer
+  - ChangeColour
   DisableAutoOpenWizard: 1
   ShowSettings: 1
